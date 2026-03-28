@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Resume Builder</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+crossorigin="anonymous"
+referrerpolicy="no-referrer">
+
+<!-- PDF Library (CORRECT) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- LEFT FORM -->
+<div class="form-section">
+
+<h2>Resume Details</h2>
+
+<label>Resume Type</label>
+<select id="type">
+<option value="fresher">Fresher</option>
+<option value="experienced">Experienced</option>
+</select>
+
+<input id="name" placeholder="Full Name">
+<input id="location" placeholder="Location">
+<input id="phone" type="tel" placeholder="Phone Number">
+<input id="email" type="email" placeholder="Email Address">
+<input id="linkedin" placeholder="LinkedIn URL">
+<input id="github" placeholder="GitHub URL">
+
+<!-- EDUCATION -->
+<h3>Education</h3>
+<input id="degree" placeholder="Degree (Example: B.Tech CSE)">
+<input id="college" placeholder="College Name">
+<input id="year" placeholder="Year (Example: 2024 - 2028)">
+<input id="percentage" placeholder="Percentage / CGPA">
+<button type="button" onclick="addEducation()">Add Education</button>
+
+<!-- SKILLS -->
+<h3>Technical Skills</h3>
+<input id="skillTitle" placeholder="Category (Example: Languages)">
+<input id="skillList" placeholder="Skills (Example: C++, Python, JavaScript)">
+<button type="button" onclick="addSkill()">Add Skill</button>
+
+<!-- PROJECTS -->
+<h3>Projects</h3>
+<input id="projectTitle" placeholder="Project Name">
+<input id="projectTagline" placeholder="Short Tagline">
+<textarea id="projectPoint1" placeholder="Bullet Point 1"></textarea>
+<textarea id="projectPoint2" placeholder="Bullet Point 2"></textarea>
+<button type="button" onclick="addProject()">Add Project</button>
+
+<!-- EXPERIENCE -->
+<div id="experienceFields">
+<h3>Work Experience</h3>
+<input id="company" placeholder="Company Name">
+<input id="role" placeholder="Role / Position">
+<input id="duration" placeholder="Duration (Example: Jan 2023 - May 2024)">
+<textarea id="expDesc" placeholder="Responsibilities"></textarea>
+<button type="button" onclick="addExperience()">Add Experience</button>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<h3>Achievements</h3>
+<input id="achievementTitle" placeholder="Achievement Title">
+<textarea id="achievementDesc" placeholder="Description"></textarea>
+<button type="button" onclick="addAchievement()">Add Achievement</button>
+
+<!-- PERSONAL DETAILS -->
+<h3>Personal Details</h3>
+<input id="dob" type="date">
+<input id="gender" placeholder="Gender">
+<input id="marital" placeholder="Marital Status">
+<input id="nationality" placeholder="Nationality">
+<input id="languages" placeholder="Languages Known">
+<input id="interests" placeholder="Interests">
+
+<!-- DECLARATION -->
+<h3>Declaration</h3>
+<textarea id="declaration" placeholder="Declaration statement"></textarea>
+
+<br><br>
+
+<button type="button" onclick="downloadPDF()">Download PDF</button>
+
+</div>
+
+<!-- RIGHT PREVIEW -->
+<div class="resume-preview">
+
+<div id="resume">
+
+<h1 id="pname">Your Name</h1>
+
+<!-- CONTACT 1 -->
+<div class="contact-line">
+<i class="fa-solid fa-location-dot"></i> <span id="plocation"></span>
+<span class="dot">·</span>
+<i class="fa-solid fa-phone"></i> <span id="pphone"></span>
+<span class="dot">·</span>
+<i class="fa-solid fa-envelope"></i> <a id="pemail"></a>
+</div>
+
+<!-- CONTACT 2 -->
+<div class="contact-line">
+<i class="fa-brands fa-linkedin"></i> <a id="plinkedin" target="_blank"></a>
+<span class="dot">·</span>
+<i class="fa-brands fa-github"></i> <a id="pgithub" target="_blank"></a>
+</div>
+
+<!-- EDUCATION -->
+<div id="educationSection">
+<h2>EDUCATION</h2>
+<div id="peducation"></div>
+</div>
+
+<!-- SKILLS -->
+<div id="skillsSection">
+<h2>TECHNICAL SKILLS</h2>
+<ul id="pskills"></ul>
+</div>
+
+<!-- PROJECTS -->
+<div id="projectSection">
+<h2>PROJECTS</h2>
+<div id="pproject"></div>
+</div>
+
+<!-- EXPERIENCE -->
+<div id="pexperienceBlock">
+<h2>WORK EXPERIENCE</h2>
+<div id="pexperience"></div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div id="achievementSection">
+<h2>ACHIEVEMENTS</h2>
+<ul id="pachievements"></ul>
+</div>
+
+<!-- PERSONAL -->
+<div id="personalSection">
+<h2>PERSONAL DETAILS</h2>
+<ul id="ppersonal">
+<li><b>Date of Birth:</b> <span id="pdob"></span></li>
+<li><b>Gender:</b> <span id="pgender"></span></li>
+<li><b>Marital Status:</b> <span id="pmarital"></span></li>
+<li><b>Nationality:</b> <span id="pnationality"></span></li>
+<li><b>Languages:</b> <span id="planguages"></span></li>
+<li><b>Interests:</b> <span id="pinterests"></span></li>
+</ul>
+</div>
+
+<!-- DECLARATION -->
+<div id="declarationSection">
+<h2>DECLARATION</h2>
+<p id="pdeclaration"></p>
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
