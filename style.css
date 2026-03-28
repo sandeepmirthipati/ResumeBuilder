@@ -1,0 +1,270 @@
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#f5f7fa;
+}
+
+/* MAIN LAYOUT */
+
+.container{
+display:flex;
+height:100vh;
+}
+
+/* FORM SECTION */
+
+.form-section{
+width:40%;
+padding:20px;
+background:white;
+overflow:auto;
+border-right:1px solid #ddd;
+}
+
+/* RESUME PREVIEW */
+
+.resume-preview{
+width:60%;
+padding:40px;
+overflow:auto;
+background:#eef2f7;
+}
+
+/* INPUT FIELDS */
+
+input, textarea, select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+box-sizing:border-box;
+}
+
+/* BUTTON */
+
+button{
+padding:10px 14px;
+background:#2563eb;
+color:white;
+border:none;
+cursor:pointer;
+margin-top:6px;
+border-radius:5px;
+font-size:14px;
+transition:0.2s;
+}
+
+button:hover
+
+/* DELETE BUTTON */
+
+.delete-btn{
+background:#dc3545;
+margin-left:8px;
+}
+
+.delete-btn:hover
+
+/* EDIT BUTTON */
+
+.edit-btn{
+background:#16a34a;
+margin-left:8px;
+}
+
+.edit-btn:hover
+
+/* RESUME BOX (A4 SIZE) */
+
+#resume{
+background:white;
+padding:25px;
+width:210mm;
+min-height:297mm;
+margin:auto;
+box-shadow:0 0 15px rgba(0,0,0,0.15);
+border-radius:6px;
+font-size:13px;
+line-height:1.35;
+box-sizing:border-box;
+page-break-inside:avoid;
+}
+
+/* HEADINGS */
+
+h1{
+text-align:center;
+margin-bottom:8px;
+letter-spacing:1px;
+font-size:24px;
+}
+
+h2{
+border-bottom:2px solid #333;
+padding-bottom:4px;
+margin-top:14px;
+font-size:16px;
+}
+
+/* LISTS */
+
+ul{
+padding-left:20px;
+margin-top:5px;
+}
+
+/* FORM SUBHEADINGS */
+
+.form-section h3{
+margin-top:22px;
+}
+
+/* CONTACT HEADER */
+
+.contact-line{
+text-align:center;
+margin-top:5px;
+font-size:13px;
+}
+
+.contact-line i{
+margin-right:4px;
+}
+
+.contact-line a{
+color:#2563eb;
+text-decoration:none;
+}
+
+.contact-line a:hover{
+text-decoration:underline;
+}
+
+.dot{
+margin:0 8px;
+}
+
+/* EDUCATION */
+
+.edu-block{
+margin-bottom:8px;
+}
+
+.edu-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.edu-degree{
+font-weight:bold;
+font-size:14px;
+}
+
+.edu-college{
+color:#333;
+}
+
+.edu-year{
+font-weight:bold;
+}
+
+.edu-percentage{
+color:#444;
+}
+
+/* TECHNICAL SKILLS */
+
+#pskills{
+list-style-type:disc;
+margin-top:5px;
+}
+
+#pskills li{
+margin-bottom:4px;
+font-size:13px;
+line-height:1.35;
+}
+
+.skill-title{
+font-weight:bold;
+}
+
+.skill-items{
+font-weight:normal;
+}
+
+/* PROJECTS */
+
+.project-block{
+margin-bottom:8px;
+}
+
+.project-title{
+font-weight:bold;
+}
+
+.project-tagline{
+font-style:italic;
+margin-left:5px;
+color:#555;
+}
+
+.project-points{
+margin-top:4px;
+}
+
+.project-points li{
+margin-bottom:3px;
+}
+
+/* ACHIEVEMENTS */
+
+#pachievements li{
+margin-bottom:4px;
+}
+
+/* PERSONAL DETAILS */
+
+#ppersonal li{
+margin-bottom:3px;
+}
+
+/* DECLARATION */
+
+#pdeclaration{
+margin-top:6px;
+font-style:italic;
+color:#333;
+}
+
+/* HIDE BUTTONS IN PDF */
+
+.pdf-mode button,
+.pdf-mode .edit-btn,
+.pdf-mode .delete-btn{
+display:none !important;
+}
+/* AUTO PAGE BREAK FIX */
+
+.project-block,
+.edu-block,
+li,
+#personalSection,
+#achievementSection {
+  page-break-inside: avoid;
+}
+
+/* allow full page break */
+#resume {
+  page-break-after: auto;
+}
+
+/* PRINT FIX */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+}
